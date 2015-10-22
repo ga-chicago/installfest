@@ -78,12 +78,12 @@ SCRIPT_SUBL_PACKAGES=$SCRIPT_SETTINGS/sublime_packages/*
 SCRIPT_THEMES=$SCRIPT_SETTINGS/terminal/*
 
 # the working folder
-STUDENT_FOLDER="$HOME/code/wdi"
+STUDENT_FOLDER="$HOME/wdi"
 
 # Deprecated as part of the utils/report_log.sh system...
 # TODO (PJ) update how reporting is done?
 # OWNER="ga-students"
-# REPO="wdi_melville_instructors"
+# REPO="wdi_chi_dragons"
 
 mkdir -p "$SCRIPT_ROOT"
 
@@ -964,6 +964,9 @@ sudo defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Only use UTF-8 in Terminal.app
 sudo defaults write com.apple.terminal StringEncodings -array 4
 
+# enable showing of system files (including pesky .DS_Store files and .git folders)
+defaults write com.apple.finder AppleShowAllFiles YES
+
 show "Complete!"
 
 # ------------------------------------------------------------------------------
@@ -1203,4 +1206,3 @@ inform "We're done!" true
 echo "#-- fin -- #"
 
 fail "Please close your terminal and open a new one!" true
-
